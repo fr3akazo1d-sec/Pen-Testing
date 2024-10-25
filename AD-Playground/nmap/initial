@@ -1,0 +1,43 @@
+# Nmap 7.95 scan initiated Fri Oct 25 21:35:39 2024 as: nmap -sCV -oN nmap/initial 192.168.84.100
+Nmap scan report for 192.168.84.100
+Host is up (0.063s latency).
+Not shown: 994 filtered tcp ports (no-response)
+PORT     STATE SERVICE       VERSION
+80/tcp   open  http          Microsoft IIS httpd 10.0
+|_http-title: SecureNet Cybersecurity
+|_http-server-header: Microsoft-IIS/10.0
+| http-methods: 
+|_  Potentially risky methods: TRACE
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds?
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+|_ssl-date: 2024-10-26T04:35:31+00:00; +8h58m55s from scanner time.
+| ssl-cert: Subject: commonName=websrv2022.Hackers.com
+| Not valid before: 2024-10-10T11:40:14
+|_Not valid after:  2025-04-11T11:40:14
+| rdp-ntlm-info: 
+|   Target_Name: Hackers
+|   NetBIOS_Domain_Name: Hackers
+|   NetBIOS_Computer_Name: WEBSRV2022
+|   DNS_Domain_Name: Hackers.com
+|   DNS_Computer_Name: websrv2022.Hackers.com
+|   DNS_Tree_Name: Hackers.com
+|   Product_Version: 10.0.20348
+|_  System_Time: 2024-10-26T04:34:49+00:00
+5985/tcp open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled but not required
+|_clock-skew: mean: 8h58m54s, deviation: 0s, median: 8h58m54s
+| smb2-time: 
+|   date: 2024-10-26T04:34:53
+|_  start_date: N/A
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Oct 25 21:36:36 2024 -- 1 IP address (1 host up) scanned in 57.46 seconds
