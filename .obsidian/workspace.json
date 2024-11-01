@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AD-Playground/Attack Vector.md",
+                "file": "Notes/Readme.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Attack Vector"
+              "title": "Readme"
             }
           }
         ]
@@ -162,11 +162,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "38fe3eea804a8669",
+  "active": "a7201beaae5eda2f",
   "lastOpenFiles": [
+    "HTB/Boxes",
+    "HTB/Academy",
+    "INE/Readme.md",
+    "HTB/Readme.md",
+    "AD-Playground/Readme.md",
+    "AD-Playground/Attack Vector.md",
     "AD-Playground/passwords/passwords.txt",
     "AD-Playground/passwords",
-    "AD-Playground/users/adminuser.txt",
-    "AD-Playground/Attack Vector.md"
+    "AD-Playground/users/adminuser.txt"
   ]
 }
